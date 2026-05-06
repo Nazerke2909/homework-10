@@ -1,10 +1,6 @@
 package com.narxoz.rpg.combatant;
 
-/**
- * Represents a player-controlled hero participating in the war council.
- */
 public class Hero {
-
     private final String name;
     private int hp;
     private final int maxHp;
@@ -27,33 +23,13 @@ public class Hero {
         this.defense = defense;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public int getMaxHp() {
-        return maxHp;
-    }
-
-    public int getMana() {
-        return mana;
-    }
-
-    public int getGold() {
-        return gold;
-    }
-
-    public int getAttackPower() {
-        return attackPower;
-    }
-
-    public int getDefense() {
-        return defense;
-    }
+    public String getName() { return name; }
+    public int getHp() { return hp; }
+    public int getMaxHp() { return maxHp; }
+    public int getMana() { return mana; }
+    public int getGold() { return gold; }
+    public int getAttackPower() { return attackPower; }
+    public int getDefense() { return defense; }
 
     public void takeDamage(int amount) {
         hp = Math.max(0, hp - Math.max(0, amount));
@@ -77,13 +53,7 @@ public class Hero {
 
     @Override
     public String toString() {
-        return "Hero{"
-                + "name='" + name + '\''
-                + ", hp=" + hp
-                + ", mana=" + mana
-                + ", gold=" + gold
-                + ", attackPower=" + attackPower
-                + ", defense=" + defense
-                + '}';
+        return "Hero{" + "name='" + name + '\'' + ", hp=" + hp + ", mana=" + mana +
+               ", gold=" + gold + ", attackPower=" + attackPower + ", defense=" + defense + '}';
     }
 }
